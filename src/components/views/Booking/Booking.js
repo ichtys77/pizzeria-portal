@@ -1,16 +1,11 @@
 import React from 'react';
 import styles from './Booking.module.scss';
-import PropTypes from 'prop-types';
 
-const Booking = ({match}) => (
+const Booking = () => (
   <div className={styles.component}>
     <h2>Booking view</h2>
-    <p> id: {match.params.id}</p>
+    <p> id: xyz098</p>
   </div>
 );
-
-Booking.propTypes = {
-  match: PropTypes.node,
-};
 
 export default Booking;

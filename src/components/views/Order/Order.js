@@ -4,7 +4,7 @@ import styles from './Order.module.scss';
 const Order = () => (
   <div className={styles.component}>
     <h2>Order view</h2>
-    <p> id: abc</p>
+    <p> id: 123abc</p>
   </div>
 );
 
