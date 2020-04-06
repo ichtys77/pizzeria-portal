@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Tables.module.scss';
-import {Link} from 'react-router-dom';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -13,92 +12,92 @@ import TextField from '@material-ui/core/TextField';
 const demoContent = [
 
   {time: '12:00-12.30',
-    table1: ['booked', 123],
+    table1: ['booked', 'xyz098'],
     table2: ['free', ''],
-    table3: ['event', 234],
+    table3: ['free', ''],
   },
 
   {time: '12:30-13.00',
-    table1: ['booked', 123],
+    table1: ['booked', 'xyz098'],
     table2: ['free', ''],
-    table3: ['event', 234],
+    table3: ['free', ''],
   },
 
   {time: '13:00-13.30',
-    table1: ['free', ''],
+    table1: ['booked', 'xyz098'],
     table2: ['free', ''],
-    table3: ['event', 234],
+    table3: ['event', 'ghi123'],
   },
 
   {time: '13:30-14.00',
-    table1: ['event', 345],
+    table1: ['booked', 'xyz098'],
     table2: ['free', ''],
-    table3: ['event', 234],
+    table3: ['event', 'ghi123'],
   },
 
   {time: '14:00-14.30',
-    table1: ['event', 345],
+    table1: ['free', ''],
     table2: ['free', ''],
-    table3: ['event', 234],
+    table3: ['event', 'ghi123'],
   },
 
   {time: '14:30-15.00',
-    table1: ['event', 345],
-    table2: ['booked', 456],
-    table3: ['event', 234],
+    table1: ['free', ''],
+    table2: ['free', ''],
+    table3: ['event', 'ghi123'],
   },
 
   {time: '15:00-15.30',
-    table1: ['event', 345],
-    table2: ['booked', 456],
-    table3: ['event', ''],
+    table1: ['free', ''],
+    table2: ['free', ''],
+    table3: ['event', 'ghi123'],
   },
 
   {time: '16:00-16.30',
-    table1: ['booked', 678],
-    table2: ['booked', 456],
-    table3: ['event', 'free'],
+    table1: ['free', ''],
+    table2: ['free', ''],
+    table3: ['event', 'ghi123'],
   },
 
   {time: '16:30-17.00',
-    table1: ['booked', 678],
-    table2: ['booked', 456],
-    table3: ['event', 'free'],
+    table1: ['free', ''],
+    table2: ['free', ''],
+    table3: ['free', ''],
   },
 
   {time: '17:00-17.30',
-    table1: ['booked', 678],
-    table2: ['booked', 456],
-    table3: ['event', 'free'],
+    table1: ['free', ''],
+    table2: ['free', ''],
+    table3: ['free', ''],
   },
 
   {time: '17:30-18.00',
-    table1: ['booked', 678],
-    table2: ['booked', 456],
+    table1: ['free', ''],
+    table2: ['free', ''],
     table3: ['free', ''],
   },
 
   {time: '18:00-18.30',
     table1: ['free', ''],
-    table2: ['booked', 456],
+    table2: ['free', ''],
     table3: ['free', ''],
   },
 
   {time: '18:30-19.00',
     table1: ['free', ''],
-    table2: ['booked', 456],
+    table2: ['free', ''],
     table3: ['free', ''],
   },
 
   {time: '19:00-19.30',
     table1: ['free', ''],
-    table2: ['booked', 456],
+    table2: ['free', ''],
     table3: ['free', ''],
   },
 
   {time: '19:30-20.00',
     table1: ['free', ''],
-    table2: ['booked', 456],
+    table2: ['free', ''],
     table3: ['free', ''],
   },
 
@@ -109,21 +108,21 @@ const renderActions = status => {
     case 'free':
       return (
         <>
-          <Button className={styles.button} variant="contained" color="primary">Book Table</Button>
-          <Button className={styles.button} variant="contained" color="primary">New Event</Button>
+          <Button className={styles.button} variant="contained" color="primary" href={`${process.env.PUBLIC_URL}/tables/booking/new`}>Book Table</Button>
+          <Button className={styles.button} variant="contained" color="primary" href={`${process.env.PUBLIC_URL}/tables/events/new`}>New Event</Button>
         </>
       );
     case 'booked':
       return (
         <>
-          <Button className={styles.button} variant="contained">DETAILS</Button>
-          <Button className={styles.button} color="secondary">Remove booking</Button>
+          <Button className={styles.button} variant="contained" href={`${process.env.PUBLIC_URL}/tables/booking/xyz098`}>xyz098</Button>
+          <Button className={styles.button} color="secondary" >Remove booking</Button>
         </>
       );
     case 'event':
       return (
         <>
-          <Button className={styles.button} variant="contained">DETAILS</Button>
+          <Button className={styles.button} variant="contained" href={`${process.env.PUBLIC_URL}/tables/events/ghi123`}>ghi123</Button>
           <Button className={styles.button} color="secondary">Remove event</Button>
         </>
       );
@@ -135,13 +134,6 @@ const renderActions = status => {
 const Tables = () => (
 
   <Paper className={styles.component}>
-
-    {/* <div className={styles.component}>
-      <Link to={`${process.env.PUBLIC_URL}/tables/booking/new`}>Book Table</Link>
-      <Link to={`${process.env.PUBLIC_URL}/tables/booking/xyz098`}>Bookings</Link>
-      <Link to={`${process.env.PUBLIC_URL}/tables/events/new`}>New Event</Link>
-      <Link to={`${process.env.PUBLIC_URL}/tables/events/ghi123`}>Events</Link>
-    </div> */}
 
     <div className={styles.calendar}>
       <form noValidate>
