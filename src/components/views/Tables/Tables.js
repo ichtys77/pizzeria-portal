@@ -15,115 +15,151 @@ const demoContent = [
     table1: ['booked', 'xyz098'],
     table2: ['free', ''],
     table3: ['free', ''],
+    table4: ['free', ''],
+    table5: ['free', ''],
+    table6: ['free', ''],
   },
 
   {time: '12:30-13.00',
     table1: ['booked', 'xyz098'],
     table2: ['free', ''],
     table3: ['free', ''],
+    table4: ['free', ''],
+    table5: ['free', ''],
+    table6: ['free', ''],
   },
 
   {time: '13:00-13.30',
     table1: ['booked', 'xyz098'],
     table2: ['free', ''],
     table3: ['event', 'ghi123'],
+    table4: ['free', ''],
+    table5: ['free', ''],
+    table6: ['free', ''],
   },
 
   {time: '13:30-14.00',
     table1: ['booked', 'xyz098'],
     table2: ['free', ''],
     table3: ['event', 'ghi123'],
+    table4: ['free', ''],
+    table5: ['free', ''],
+    table6: ['free', ''],
   },
 
   {time: '14:00-14.30',
     table1: ['free', ''],
     table2: ['free', ''],
     table3: ['event', 'ghi123'],
+    table4: ['free', ''],
+    table5: ['free', ''],
+    table6: ['free', ''],
   },
 
   {time: '14:30-15.00',
     table1: ['free', ''],
     table2: ['free', ''],
     table3: ['event', 'ghi123'],
+    table4: ['free', ''],
+    table5: ['free', ''],
+    table6: ['free', ''],
   },
 
   {time: '15:00-15.30',
     table1: ['free', ''],
     table2: ['free', ''],
     table3: ['event', 'ghi123'],
+    table4: ['free', ''],
+    table5: ['free', ''],
+    table6: ['free', ''],
   },
 
   {time: '16:00-16.30',
     table1: ['free', ''],
     table2: ['free', ''],
     table3: ['event', 'ghi123'],
+    table4: ['free', ''],
+    table5: ['free', ''],
+    table6: ['free', ''],
   },
 
   {time: '16:30-17.00',
     table1: ['free', ''],
     table2: ['free', ''],
     table3: ['free', ''],
+    table4: ['free', ''],
+    table5: ['free', ''],
+    table6: ['free', ''],
   },
 
   {time: '17:00-17.30',
     table1: ['free', ''],
     table2: ['free', ''],
     table3: ['free', ''],
+    table4: ['free', ''],
+    table5: ['free', ''],
+    table6: ['free', ''],
   },
 
   {time: '17:30-18.00',
     table1: ['free', ''],
     table2: ['free', ''],
     table3: ['free', ''],
+    table4: ['free', ''],
+    table5: ['free', ''],
+    table6: ['free', ''],
   },
 
   {time: '18:00-18.30',
     table1: ['free', ''],
     table2: ['free', ''],
     table3: ['free', ''],
+    table4: ['free', ''],
+    table5: ['free', ''],
+    table6: ['free', ''],
   },
 
   {time: '18:30-19.00',
     table1: ['free', ''],
     table2: ['free', ''],
     table3: ['free', ''],
+    table4: ['free', ''],
+    table5: ['free', ''],
+    table6: ['free', ''],
   },
 
   {time: '19:00-19.30',
     table1: ['free', ''],
     table2: ['free', ''],
     table3: ['free', ''],
+    table4: ['free', ''],
+    table5: ['free', ''],
+    table6: ['free', ''],
   },
 
   {time: '19:30-20.00',
     table1: ['free', ''],
     table2: ['free', ''],
     table3: ['free', ''],
+    table4: ['free', ''],
+    table5: ['free', ''],
+    table6: ['free', ''],
   },
 
 ];
 
 const renderActions = status => {
   switch (status) {
-    case 'free':
-      return (
-        <>
-          <Button className={styles.button} variant="contained" color="primary" href={`${process.env.PUBLIC_URL}/tables/booking/new`}>Book Table</Button>
-          <Button className={styles.button} variant="contained" color="primary" href={`${process.env.PUBLIC_URL}/tables/events/new`}>New Event</Button>
-        </>
-      );
     case 'booked':
       return (
         <>
           <Button className={styles.button} variant="contained" href={`${process.env.PUBLIC_URL}/tables/booking/xyz098`}>xyz098</Button>
-          <Button className={styles.button} color="secondary" >Remove booking</Button>
         </>
       );
     case 'event':
       return (
         <>
           <Button className={styles.button} variant="contained" href={`${process.env.PUBLIC_URL}/tables/events/ghi123`}>ghi123</Button>
-          <Button className={styles.button} color="secondary">Remove event</Button>
         </>
       );
     default:
@@ -150,13 +186,21 @@ const Tables = () => (
       </form>
     </div>
 
+    <div className={styles.buttonContainer}>
+      <Button className={styles.button} color="primary" variant="contained" href={`${process.env.PUBLIC_URL}/tables/booking/new`}>Book Table</Button>
+      <Button className={styles.button} color="primary" variant="contained" href={`${process.env.PUBLIC_URL}/tables/events/new`}>New Event</Button>
+    </div>
+
     <Table>
       <TableHead>
         <TableRow>
-          <TableCell>HOUR</TableCell>
-          <TableCell>Table 1</TableCell>
-          <TableCell>Table 2</TableCell>
-          <TableCell>Table 3</TableCell>
+          <TableCell width={200}>HOUR</TableCell>
+          <TableCell width={200}>Table 1</TableCell>
+          <TableCell width={200}>Table 2</TableCell>
+          <TableCell width={200}>Table 3</TableCell>
+          <TableCell width={200}>Table 4</TableCell>
+          <TableCell width={200}>Table 5</TableCell>
+          <TableCell width={200}>Table 6</TableCell>
         </TableRow>
       </TableHead>
 
@@ -175,10 +219,18 @@ const Tables = () => (
             <TableCell>
               {renderActions(row.table3[0])}
             </TableCell>
+            <TableCell>
+              {renderActions(row.table4[0])}
+            </TableCell>
+            <TableCell>
+              {renderActions(row.table5[0])}
+            </TableCell>
+            <TableCell>
+              {renderActions(row.table6[0])}
+            </TableCell>
           </TableRow>
         ))}
       </TableBody>
-
     </Table>
 
   </Paper>

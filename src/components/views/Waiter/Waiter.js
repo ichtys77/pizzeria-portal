@@ -11,7 +11,7 @@ import Button from '@material-ui/core/Button';
 const demoContent = [
   {id: '1', status: 'free', order: null},
   {id: '2', status: 'thinking', order: null},
-  {id: '3', status: 'ordered', order: 123},
+  {id: '3', status: 'ordered', order: 'abc123'},
   {id: '4', status: 'prepared', order: 234},
   {id: '5', status: 'delivered', order: 345},
   {id: '6', status: 'paid', order: 456},
@@ -23,12 +23,12 @@ const renderActions = status => {
       return (
         <>
           <Button>thinking</Button>
-          <Button>new order</Button>
+          <Button color="primary" variant="contained" href={`${process.env.PUBLIC_URL}/waiter/order/new`}>new order</Button>
         </>
       );
     case 'thinking':
       return (
-        <Button>new order</Button>
+        <Button color="primary" variant="contained" href={`${process.env.PUBLIC_URL}/waiter/order/new`}>new order</Button>
       );
     case 'ordered':
       return (
@@ -73,7 +73,7 @@ const Waiter = () => (
             </TableCell>
             <TableCell>
               {row.order && (
-                <Button to={`${process.env.PUBLIC_URL}/waiter/order/${row.order}`}>
+                <Button variant="contained" href={`${process.env.PUBLIC_URL}/waiter/order/${row.order}`}>
                   {row.order}
                 </Button>
               )}
