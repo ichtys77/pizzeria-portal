@@ -7,14 +7,15 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 
 const demoContent = [
-  {id: '1', status: 'free', order: null},
-  {id: '2', status: 'thinking', order: null},
-  {id: '3', status: 'ordered', order: 'abc123'},
-  {id: '4', status: 'prepared', order: 234},
-  {id: '5', status: 'delivered', order: 345},
-  {id: '6', status: 'paid', order: 456},
+  {table: '1', status: 'free', order: null},
+  {table: '2', status: 'thinking', order: null},
+  {table: '3', status: 'ordered', order: 'abc123'},
+  {table: '4', status: 'prepared', order: 'abc234'},
+  {table: '5', status: 'delivered', order: 'abc345'},
+  {table: '6', status: 'paid', order: 'abc456'},
 ];
 
 const renderActions = status => {
@@ -53,23 +54,23 @@ const renderActions = status => {
 
 const Waiter = () => (
   <Paper className={styles.component}>
+
+    <Typography variant="h5">WAITER WORKFLOW</Typography>
+
     <Table>
       <TableHead>
         <TableRow>
           <TableCell>Table</TableCell>
-          <TableCell>Status</TableCell>
           <TableCell>Order</TableCell>
+          <TableCell>Status</TableCell>
           <TableCell>Action</TableCell>
         </TableRow>
       </TableHead>
       <TableBody>
         {demoContent.map(row => (
-          <TableRow key={row.id}>
+          <TableRow key={row.table}>
             <TableCell component="th" scope="row">
-              {row.id}
-            </TableCell>
-            <TableCell>
-              {row.status}
+              {row.table}
             </TableCell>
             <TableCell>
               {row.order && (
@@ -77,6 +78,9 @@ const Waiter = () => (
                   {row.order}
                 </Button>
               )}
+            </TableCell>
+            <TableCell>
+              {row.status}
             </TableCell>
             <TableCell>
               {renderActions(row.status)}

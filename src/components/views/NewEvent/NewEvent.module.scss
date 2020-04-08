@@ -1,5 +1,13 @@
+
 @import '../../../styles/settings.scss';
 
 .component {
   padding: $base-size;
+  margin: 60px auto;
+}
+
+.foot {
+  margin: 20px 40px;
+  display: flex;
+  justify-content: space-around;
 }

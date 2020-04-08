@@ -8,10 +8,12 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import Typography from '@material-ui/core/Typography';
 
 const demoContent = [
 
-  {time: '12:00-12.30',
+  {id: 1,
+    time: '12:00-12.30',
     table1: ['booked', 'xyz098'],
     table2: ['free', ''],
     table3: ['free', ''],
@@ -20,7 +22,8 @@ const demoContent = [
     table6: ['free', ''],
   },
 
-  {time: '12:30-13.00',
+  {id: 2,
+    time: '12:30-13.00',
     table1: ['booked', 'xyz098'],
     table2: ['free', ''],
     table3: ['free', ''],
@@ -29,7 +32,8 @@ const demoContent = [
     table6: ['free', ''],
   },
 
-  {time: '13:00-13.30',
+  {id: 3,
+    time: '13:00-13.30',
     table1: ['booked', 'xyz098'],
     table2: ['free', ''],
     table3: ['event', 'ghi123'],
@@ -38,7 +42,8 @@ const demoContent = [
     table6: ['free', ''],
   },
 
-  {time: '13:30-14.00',
+  {id: 4,
+    time: '13:30-14.00',
     table1: ['booked', 'xyz098'],
     table2: ['free', ''],
     table3: ['event', 'ghi123'],
@@ -47,7 +52,8 @@ const demoContent = [
     table6: ['free', ''],
   },
 
-  {time: '14:00-14.30',
+  {id: 5,
+    time: '14:00-14.30',
     table1: ['free', ''],
     table2: ['free', ''],
     table3: ['event', 'ghi123'],
@@ -56,7 +62,8 @@ const demoContent = [
     table6: ['free', ''],
   },
 
-  {time: '14:30-15.00',
+  {id: 6,
+    time: '14:30-15.00',
     table1: ['free', ''],
     table2: ['free', ''],
     table3: ['event', 'ghi123'],
@@ -65,7 +72,8 @@ const demoContent = [
     table6: ['free', ''],
   },
 
-  {time: '15:00-15.30',
+  {id: 7,
+    time: '15:00-15.30',
     table1: ['free', ''],
     table2: ['free', ''],
     table3: ['event', 'ghi123'],
@@ -74,7 +82,8 @@ const demoContent = [
     table6: ['free', ''],
   },
 
-  {time: '16:00-16.30',
+  {id: 8,
+    time: '16:00-16.30',
     table1: ['free', ''],
     table2: ['free', ''],
     table3: ['event', 'ghi123'],
@@ -83,7 +92,8 @@ const demoContent = [
     table6: ['free', ''],
   },
 
-  {time: '16:30-17.00',
+  {id: 9,
+    time: '16:30-17.00',
     table1: ['free', ''],
     table2: ['free', ''],
     table3: ['free', ''],
@@ -92,7 +102,8 @@ const demoContent = [
     table6: ['free', ''],
   },
 
-  {time: '17:00-17.30',
+  {id: 10,
+    time: '17:00-17.30',
     table1: ['free', ''],
     table2: ['free', ''],
     table3: ['free', ''],
@@ -101,7 +112,8 @@ const demoContent = [
     table6: ['free', ''],
   },
 
-  {time: '17:30-18.00',
+  {id: 11,
+    time: '17:30-18.00',
     table1: ['free', ''],
     table2: ['free', ''],
     table3: ['free', ''],
@@ -110,7 +122,8 @@ const demoContent = [
     table6: ['free', ''],
   },
 
-  {time: '18:00-18.30',
+  {id: 12,
+    time: '18:00-18.30',
     table1: ['free', ''],
     table2: ['free', ''],
     table3: ['free', ''],
@@ -119,7 +132,8 @@ const demoContent = [
     table6: ['free', ''],
   },
 
-  {time: '18:30-19.00',
+  {id: 13,
+    time: '18:30-19.00',
     table1: ['free', ''],
     table2: ['free', ''],
     table3: ['free', ''],
@@ -128,7 +142,8 @@ const demoContent = [
     table6: ['free', ''],
   },
 
-  {time: '19:00-19.30',
+  {id: 14,
+    time: '19:00-19.30',
     table1: ['free', ''],
     table2: ['free', ''],
     table3: ['free', ''],
@@ -137,7 +152,8 @@ const demoContent = [
     table6: ['free', ''],
   },
 
-  {time: '19:30-20.00',
+  {id: 15,
+    time: '19:30-20.00',
     table1: ['free', ''],
     table2: ['free', ''],
     table3: ['free', ''],
@@ -170,6 +186,8 @@ const renderActions = status => {
 const Tables = () => (
 
   <Paper className={styles.component}>
+
+    <Typography variant="h5">TABLES SCHEDULE</Typography>
 
     <div className={styles.calendar}>
       <form noValidate>

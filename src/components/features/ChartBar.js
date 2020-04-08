@@ -8,6 +8,7 @@ import {
 
 import { Animation } from '@devexpress/dx-react-chart';
 import Typography from '@material-ui/core/Typography';
+import styles from './ChartBar.module.scss';
 
 const data = [
   { status: 'new', orderCount: 9 },
@@ -33,6 +34,7 @@ class ChartBar extends React.PureComponent {
 
     return (
       <Chart
+        className={styles.chart}
         data={chartData}
       >
         <ArgumentAxis />

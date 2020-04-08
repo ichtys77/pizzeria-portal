@@ -11,12 +11,12 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
 const demoReservation = [
-  {id: 'xyz098', type: 'booked', duration: '12.00-14.00', table: 'Table 1'},
-  {id: 'ghi123', type: 'event', duration: '13.00-16.30', table: 'Table 3'},
+  {id: 'xyz098', type: 'booked', duration: '12.00-14.00', table: '1'},
+  {id: 'ghi123', type: 'event', duration: '13.00-16.30', table: '3'},
 ];
 
 const demoOrders = [
-  {id: 'abc123', status: 'ready', table: 'Table 2', waiter: 'Tommy'},
+  {id: 'abc123', status: 'prepared', table: '2', waiter: 'Tommy'},
 ];
 
 const renderActions = status => {
@@ -24,19 +24,19 @@ const renderActions = status => {
     case 'booked':
       return (
         <>
-          <Button className={styles.button} variant="contained" href={`${process.env.PUBLIC_URL}/tables/booking/xyz098`}>xyz098</Button>
+          <Button variant="contained" href={`${process.env.PUBLIC_URL}/tables/booking/xyz098`}>xyz098</Button>
         </>
       );
     case 'event':
       return (
         <>
-          <Button className={styles.button} variant="contained" href={`${process.env.PUBLIC_URL}/tables/events/ghi123`}>ghi123</Button>
+          <Button variant="contained" href={`${process.env.PUBLIC_URL}/tables/events/ghi123`}>ghi123</Button>
         </>
       );
-    case 'ready':
+    case 'prepared':
       return (
         <>
-          <Button className={styles.button} variant="contained" href={`${process.env.PUBLIC_URL}/waiter/order/abc123`}>abc123</Button>
+          <Button variant="contained" href={`${process.env.PUBLIC_URL}/waiter/order/abc123`}>abc123</Button>
         </>
       );
     default:
@@ -58,7 +58,7 @@ const Homepage = () => (
             <TableCell>ID</TableCell>
             <TableCell>Type</TableCell>
             <TableCell>Duration</TableCell>
-            <TableCell>Table no.</TableCell>
+            <TableCell>Table</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -89,7 +89,7 @@ const Homepage = () => (
             <TableCell>ID</TableCell>
             <TableCell>Staus</TableCell>
             <TableCell>Waiter</TableCell>
-            <TableCell>Table no.</TableCell>
+            <TableCell>Table</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
