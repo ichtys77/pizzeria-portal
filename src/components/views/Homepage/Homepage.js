@@ -11,12 +11,12 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
 const demoReservation = [
-  {id: 'xyz098', type: 'booked', duration: '12.00-14.00', table: '1'},
-  {id: 'ghi123', type: 'event', duration: '13.00-16.30', table: '3'},
+  {id: '123456', type: 'booked', duration: '12.00-14.00', table: '1'},
+  {id: '234567', type: 'event', duration: '13.00-16.30', table: '3'},
 ];
 
 const demoOrders = [
-  {id: 'abc123', status: 'prepared', table: '2', waiter: 'Tommy'},
+  {id: '987654', status: 'prepared', table: '2', waiter: 'Tommy'},
 ];
 
 const renderActions = status => {
@@ -24,19 +24,19 @@ const renderActions = status => {
     case 'booked':
       return (
         <>
-          <Button variant="contained" href={`${process.env.PUBLIC_URL}/tables/booking/xyz098`}>xyz098</Button>
+          <Button variant="contained" href={`${process.env.PUBLIC_URL}/tables/booking/123456`}>123456</Button>
         </>
       );
     case 'event':
       return (
         <>
-          <Button variant="contained" href={`${process.env.PUBLIC_URL}/tables/events/ghi123`}>ghi123</Button>
+          <Button variant="contained" href={`${process.env.PUBLIC_URL}/tables/events/234567`}>234567</Button>
         </>
       );
     case 'prepared':
       return (
         <>
-          <Button variant="contained" href={`${process.env.PUBLIC_URL}/waiter/order/abc123`}>abc123</Button>
+          <Button variant="contained" href={`${process.env.PUBLIC_URL}/waiter/order/987654`}>987654</Button>
         </>
       );
     default:
@@ -55,7 +55,7 @@ const Homepage = () => (
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>ID</TableCell>
+            <TableCell>Order ID</TableCell>
             <TableCell>Type</TableCell>
             <TableCell>Duration</TableCell>
             <TableCell>Table</TableCell>
@@ -86,7 +86,7 @@ const Homepage = () => (
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>ID</TableCell>
+            <TableCell>Order ID</TableCell>
             <TableCell>Staus</TableCell>
             <TableCell>Waiter</TableCell>
             <TableCell>Table</TableCell>

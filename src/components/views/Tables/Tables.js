@@ -14,7 +14,7 @@ const demoContent = [
 
   {id: 1,
     time: '12:00-12.30',
-    table1: ['booked', 'xyz098'],
+    table1: ['booked', '123456'],
     table2: ['free', ''],
     table3: ['free', ''],
     table4: ['free', ''],
@@ -24,7 +24,7 @@ const demoContent = [
 
   {id: 2,
     time: '12:30-13.00',
-    table1: ['booked', 'xyz098'],
+    table1: ['booked', '123456'],
     table2: ['free', ''],
     table3: ['free', ''],
     table4: ['free', ''],
@@ -34,9 +34,9 @@ const demoContent = [
 
   {id: 3,
     time: '13:00-13.30',
-    table1: ['booked', 'xyz098'],
+    table1: ['booked', '123456'],
     table2: ['free', ''],
-    table3: ['event', 'ghi123'],
+    table3: ['event', '234567'],
     table4: ['free', ''],
     table5: ['free', ''],
     table6: ['free', ''],
@@ -44,9 +44,9 @@ const demoContent = [
 
   {id: 4,
     time: '13:30-14.00',
-    table1: ['booked', 'xyz098'],
+    table1: ['booked', '123456'],
     table2: ['free', ''],
-    table3: ['event', 'ghi123'],
+    table3: ['event', '234567'],
     table4: ['free', ''],
     table5: ['free', ''],
     table6: ['free', ''],
@@ -56,7 +56,7 @@ const demoContent = [
     time: '14:00-14.30',
     table1: ['free', ''],
     table2: ['free', ''],
-    table3: ['event', 'ghi123'],
+    table3: ['event', '234567'],
     table4: ['free', ''],
     table5: ['free', ''],
     table6: ['free', ''],
@@ -66,7 +66,7 @@ const demoContent = [
     time: '14:30-15.00',
     table1: ['free', ''],
     table2: ['free', ''],
-    table3: ['event', 'ghi123'],
+    table3: ['event', '234567'],
     table4: ['free', ''],
     table5: ['free', ''],
     table6: ['free', ''],
@@ -76,7 +76,7 @@ const demoContent = [
     time: '15:00-15.30',
     table1: ['free', ''],
     table2: ['free', ''],
-    table3: ['event', 'ghi123'],
+    table3: ['event', '234567'],
     table4: ['free', ''],
     table5: ['free', ''],
     table6: ['free', ''],
@@ -86,7 +86,7 @@ const demoContent = [
     time: '16:00-16.30',
     table1: ['free', ''],
     table2: ['free', ''],
-    table3: ['event', 'ghi123'],
+    table3: ['event', '234567'],
     table4: ['free', ''],
     table5: ['free', ''],
     table6: ['free', ''],
@@ -169,13 +169,13 @@ const renderActions = status => {
     case 'booked':
       return (
         <>
-          <Button className={styles.button} variant="contained" href={`${process.env.PUBLIC_URL}/tables/booking/xyz098`}>xyz098</Button>
+          <Button className={styles.button} variant="contained" href={`${process.env.PUBLIC_URL}/tables/booking/123456`}>123456</Button>
         </>
       );
     case 'event':
       return (
         <>
-          <Button className={styles.button} variant="contained" href={`${process.env.PUBLIC_URL}/tables/events/ghi123`}>ghi123</Button>
+          <Button className={styles.button} variant="contained" href={`${process.env.PUBLIC_URL}/tables/events/234567`}>234567</Button>
         </>
       );
     default:
@@ -192,7 +192,6 @@ const Tables = () => (
     <div className={styles.calendar}>
       <form noValidate>
         <TextField
-          className={styles.input}
           id="date"
           label="Date"
           type="date"

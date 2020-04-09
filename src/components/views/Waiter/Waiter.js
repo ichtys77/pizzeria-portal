@@ -12,10 +12,10 @@ import Typography from '@material-ui/core/Typography';
 const demoContent = [
   {table: '1', status: 'free', order: null},
   {table: '2', status: 'thinking', order: null},
-  {table: '3', status: 'ordered', order: 'abc123'},
-  {table: '4', status: 'prepared', order: 'abc234'},
-  {table: '5', status: 'delivered', order: 'abc345'},
-  {table: '6', status: 'paid', order: 'abc456'},
+  {table: '3', status: 'ordered', order: '987654'},
+  {table: '4', status: 'prepared', order: '876543'},
+  {table: '5', status: 'delivered', order: '765432'},
+  {table: '6', status: 'paid', order: '654321'},
 ];
 
 const renderActions = status => {
@@ -61,7 +61,7 @@ const Waiter = () => (
       <TableHead>
         <TableRow>
           <TableCell>Table</TableCell>
-          <TableCell>Order</TableCell>
+          <TableCell>Order ID</TableCell>
           <TableCell>Status</TableCell>
           <TableCell>Action</TableCell>
         </TableRow>

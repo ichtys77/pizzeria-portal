@@ -10,11 +10,11 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 const demoContent = [
-  {id: '5', order: 'abc123', status: 'prepared', task: 'prawns tagliatelle', amount:'2', table: 3},
-  {id: '4', order: 'abc234', status: 'preparing', task: 'zio stefano\'s breakfast', amount:'2', table: 4},
-  {id: '3', order: 'abc345', status: 'preparing', task: 'pizza salami bacon', amount:'1', table: 2},
-  {id: '2', order: 'abc456', status: 'done', task: 'nonno alberto\'s salad', amount:'1', table: 1},
-  {id: '1', order: 'abc567', status: 'done', task: 'nonna alba\'s pizza', amount:'1', table: 6},
+  {id: '5', order: '987654', status: 'prepared', task: 'prawns tagliatelle', amount:'2', table: 3},
+  {id: '4', order: '876543', status: 'preparing', task: 'zio stefano\'s breakfast', amount:'2', table: 4},
+  {id: '3', order: '765432', status: 'preparing', task: 'pizza salami bacon', amount:'1', table: 2},
+  {id: '2', order: '654321', status: 'done', task: 'nonno alberto\'s salad', amount:'1', table: 1},
+  {id: '1', order: '543210', status: 'done', task: 'nonna alba\'s pizza', amount:'1', table: 6},
 ];
 
 const renderActions = status => {
@@ -39,11 +39,11 @@ const Kitchen = () => (
 
     <Typography variant="h5">KITCHEN WORKFLOW</Typography>
 
-    <Table>
+    <Table className={styles.table}>
       <TableHead>
         <TableRow>
           <TableCell>Queue</TableCell>
-          <TableCell>Order</TableCell>
+          <TableCell>Order ID</TableCell>
           <TableCell>Status</TableCell>
           <TableCell>To do</TableCell>
           <TableCell>Amount</TableCell>
