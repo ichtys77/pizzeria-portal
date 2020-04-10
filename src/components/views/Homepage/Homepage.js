@@ -9,6 +9,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import {NavLink} from 'react-router-dom';
 
 const demoReservation = [
   {id: '123456', type: 'booked', duration: '12.00-14.00', table: '1'},
@@ -24,19 +25,19 @@ const renderActions = status => {
     case 'booked':
       return (
         <>
-          <Button variant="contained" href={`${process.env.PUBLIC_URL}/tables/booking/123456`}>123456</Button>
+          <Button variant="contained" component={NavLink} to={`${process.env.PUBLIC_URL}/tables/booking/123456`}>123456</Button>
         </>
       );
     case 'event':
       return (
         <>
-          <Button variant="contained" href={`${process.env.PUBLIC_URL}/tables/events/234567`}>234567</Button>
+          <Button variant="contained" component={NavLink} to={`${process.env.PUBLIC_URL}/tables/events/234567`}>234567</Button>
         </>
       );
     case 'prepared':
       return (
         <>
-          <Button variant="contained" href={`${process.env.PUBLIC_URL}/waiter/order/987654`}>987654</Button>
+          <Button variant="contained" component={NavLink} to={`${process.env.PUBLIC_URL}/waiter/order/987654`}>987654</Button>
         </>
       );
     default:

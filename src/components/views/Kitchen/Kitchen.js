@@ -8,6 +8,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import {NavLink} from 'react-router-dom';
 
 const demoContent = [
   {id: '5', order: '987654', status: 'prepared', task: 'prawns tagliatelle', amount:'2', table: 3},
@@ -59,7 +60,7 @@ const Kitchen = () => (
             </TableCell>
             <TableCell>
               {row.order && (
-                <Button variant="contained" href={`${process.env.PUBLIC_URL}/waiter/order/${row.order}`}>
+                <Button variant="contained" component={NavLink} to={`${process.env.PUBLIC_URL}/waiter/order/${row.order}`}>
                   {row.order}
                 </Button>
               )}
